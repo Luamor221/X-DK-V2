@@ -1,0 +1,75 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local executor = identifyexecutor and identifyexecutor() or "Unknown Executor"
+
+local customTheme = {
+   TextColor = Color3.fromRGB(255, 255, 255),
+   Background = Color3.fromRGB(0, 0, 0),
+   Topbar = Color3.fromRGB(0, 0, 0),
+   TopbarLine = Color3.fromRGB(255, 255, 255),
+   Shadow = Color3.fromRGB(0, 0, 0),
+   Accent = Color3.fromRGB(255, 255, 255),
+   NotificationBackground = Color3.fromRGB(0, 0, 0),
+   NotificationActionsBackground = Color3.fromRGB(0, 0, 0),
+   TabBackground = Color3.fromRGB(0, 0, 0),
+   TabStroke = Color3.fromRGB(255, 255, 255),
+   TabBackgroundSelected = Color3.fromRGB(0, 0, 0),
+   TabTextColor = Color3.fromRGB(255, 255, 255),
+   SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
+   ElementBackground = Color3.fromRGB(0, 0, 0),
+   ElementBackgroundHover = Color3.fromRGB(20, 20, 20),
+   SecondaryElementBackground = Color3.fromRGB(0, 0, 0),
+   ElementStroke = Color3.fromRGB(255, 255, 255),
+   SecondaryElementStroke = Color3.fromRGB(255, 255, 255),
+   SliderBackground = Color3.fromRGB(0, 0, 0),
+   SliderProgress = Color3.fromRGB(255, 255, 255),
+   SliderStroke = Color3.fromRGB(255, 255, 255),
+   ToggleBackground = Color3.fromRGB(0, 0, 0),
+   ToggleEnabled = Color3.fromRGB(255, 255, 255),
+   ToggleDisabled = Color3.fromRGB(100, 100, 100),
+   ToggleEnabledStroke = Color3.fromRGB(255, 255, 255),
+   ToggleDisabledStroke = Color3.fromRGB(100, 100, 100),
+   ToggleEnabledOuterStroke = Color3.fromRGB(255, 255, 255),
+   ToggleDisabledOuterStroke = Color3.fromRGB(100, 100, 100),
+   DropdownSelected = Color3.fromRGB(255, 255, 255),
+   DropdownUnselected = Color3.fromRGB(0, 0, 0),
+   InputBackground = Color3.fromRGB(0, 0, 0),
+   InputStroke = Color3.fromRGB(255, 255, 255),
+   PlaceholderColor = Color3.fromRGB(150, 150, 150),
+   KeyInputBackground = Color3.fromRGB(0, 0, 0),
+   KeyInputTextColor = Color3.fromRGB(255, 255, 255)
+}
+
+local Window = Rayfield:CreateWindow({
+   Name = "X-DK V2 | Tha Bronx | "..executor,
+   Icon = nil,
+   LoadingTitle = "",
+   LoadingSubtitle = "",
+   Theme = customTheme,
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false,
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = "BlackThemeHub",
+      FileName = "BigHub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "Fy7PanRV",
+      RememberJoins = true
+   },
+   KeySystem = false,
+   KeySettings = {
+      Title = "X-DK | V1",
+      Subtitle = "Enter Key Below",
+      Note = "Buy A Key At Discord.gg/dkshub",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {""},
+      Theme = customTheme
+   }
+})
+
+local MainTab = Window:CreateTab("Main", 4483362458)
+local MainSection1 = MainTab:CreateSection("Welcome!")
