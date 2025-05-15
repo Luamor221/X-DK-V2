@@ -1,15 +1,14 @@
-local valid_keys = {
-    ["T"] = true,
-    ["Test123"] = true,
-    ["MyKey456"] = true,
+local whitelist = {
+    ["User1"] = true,
+    ["User2"] = true,
+    -- Roblox usernames or UserIds
 }
 
-if not valid_keys[key] then
-    return warn("Invalid key! Access denied.")
-end
-
--- Your real script logic below:
-print("Key is valid! Running script...")
+game.Players.PlayerAdded:Connect(function(player)
+    if not whitelist[player.Name] then  -- or use player.UserId for better security
+        player:Kick("You are not whitelisted on this server.")
+    end
+end)
 
 
 
