@@ -1,4 +1,20 @@
+local valid_keys = {
+    ["T"] = true,
+    ["Test123"] = true,
+    ["MyKey456"] = true,
+}
+
+if not valid_keys[key] then
+    return warn("Invalid key! Access denied.")
+end
+
+-- Your real script logic below:
+print("Key is valid! Running script...")
+
+
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
 
 local executor = identifyexecutor and identifyexecutor() or "Unknown Executor"
 
